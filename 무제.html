@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+</head>
+<body>
+  <video id="myVideo" src="GD2_22100392.mp4" muted playsinline controls></video>
+  <br>
+  <script>
+    function goFullscreen() {
+      const video = document.getElementById('myVideo');
+      if (video.requestFullscreen) {
+        video.requestFullscreen();
+      } else if (video.webkitEnterFullscreen) { // iPhone
+        video.webkitEnterFullscreen();
+      } else if (video.msRequestFullscreen) {
+        video.msRequestFullscreen();
+      }
+      video.play();
+    }
+  </script>
+
+</body>
+</html>
